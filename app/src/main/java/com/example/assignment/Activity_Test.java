@@ -11,6 +11,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
@@ -159,6 +161,7 @@ public class Activity_Test extends Activity {
                         break;
                     default:
                         Location = "&nx=69&ny=107";
+                        Toast.makeText(getApplicationContext(), AuotoText1.getText().toString() + "는 검색할 수 없는 지역입니다.", Toast.LENGTH_SHORT).show();
                         break;
                 }
 
@@ -200,7 +203,7 @@ public class Activity_Test extends Activity {
         btnTIP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvTEST.setText("갱신을 눌러주세요.\n\nTip: 강수 형태 알아보기\n\n 없음(0)\n 비(1)\n 비/눈(2)\n 눈(3)\n 빗방울(5)\n 빗방울눈날림(6)\n 눈날림(7)");
+                tvTEST.setText("지역 입력 후 갱신을 눌러주세요.\n\nTip1: 강수 형태 알아보기\n 없음(0)\n 비(1)\n 비/눈(2)\n 눈(3)\n 빗방울(5)\n 빗방울눈날림(6)\n 눈날림(7)\n\nTip2: 검색 가능한 지역\n- 청주, 오창, 서울, 대전\n- 대구, 부산, 독도, 제주\n- 지역 디폴트는 청주입니다!");
             }
         });
 
