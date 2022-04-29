@@ -5,6 +5,15 @@
     android:layout_height="match_parent">
 
 
+    <AutoCompleteTextView
+        android:id="@+id/AuotoText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="지역"
+        android:completionThreshold="0"
+        android:completionHint="지역을 선택하세요"/>
+
     <Button
         android:id="@+id/btnRefresh"
         android:layout_width="match_parent"

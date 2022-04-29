@@ -6,7 +6,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
@@ -101,6 +104,11 @@ public class Activity_Test extends Activity {
         Button btnRefresh = (Button) findViewById(R.id.btnRefresh);
         Button btnEndTEST = (Button) findViewById(R.id.btnEndTEST);
         Button btnTIP = (Button) findViewById(R.id.btnTIP);
+        AutoCompleteTextView AuotoText1 = (AutoCompleteTextView) findViewById(R.id.AuotoText1);
+
+        String[] items = {"청주", "오창", "서울", "대전", "대구", "부산", "독도", "제주"};
+
+        AuotoText1.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, items));
 
         SimpleDateFormat real_time = new SimpleDateFormat("yyyyMMdd");
         Date time = new Date();
@@ -118,15 +126,46 @@ public class Activity_Test extends Activity {
         final String base_time_f = base_time;
 
 
-        //String serviceKey = "=5LMImuDe4KYWVHN%2BC8ZiRhKnnboWUFJjia05xmbVjuw79Gv5upIZD%2BB03TgGptciKHQAYkX5TNgTptdIAqJYPg%3D%3D";
-        String URL_weather = "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey" +
-                serviceKey + "&pageNo=1&numOfRows=1000&dataType=XML&base_date=" + base_date + "&base_time=" + base_time_f + "&nx=68&ny=109";
-
-
         btnRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                String Location = "&nx=68&ny=109";
+
+                switch (AuotoText1.getText().toString()){
+                    case "청주":
+                        Location = "&nx=69&ny=107";
+                        break;
+                    case "오창":
+                        Location = "&nx=68&ny=109";
+                        break;
+                    case "서울":
+                        Location = "&nx=60&ny=127";
+                        break;
+                    case "대전":
+                        Location = "&nx=67&ny=100";
+                        break;
+                    case "대구":
+                        Location = "&nx=89&ny=90";
+                        break;
+                    case "부산":
+                        Location = "&nx=98&ny=76";
+                        break;
+                    case "독도":
+                        Location = "&nx=144&ny=123";
+                        break;
+                    case "제주":
+                        Location = "&nx=52&ny=38";
+                        break;
+                    default:
+                        Location = "&nx=69&ny=107";
+                        break;
+                }
+
+                String XYLocation = Location;
+
+                String URL_weather = "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey" +
+                        serviceKey + "&pageNo=1&numOfRows=1000&dataType=XML&base_date=" + base_date + "&base_time=" + base_time_f + XYLocation ;
 
                 OpenAPI dust = new OpenAPI(URL_weather);
                 dust.execute();

@@ -20,7 +20,7 @@
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="가위 바위 보\n\n오창 날씨\n\n복권번호 추천기"
+            android:text="가위 바위 보\n\n날씨\n\n복권번호 추천기"
             android:textColor="@color/white"
             android:gravity="center"
             android:textSize="40dp"
@@ -46,7 +46,7 @@
             android:id="@+id/btnTEST"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="오창 현재 날씨"
+            android:text="현재 날씨"
             android:textSize="20dp"
             android:layout_marginBottom="30dp"
             android:background="@color/white"/>
