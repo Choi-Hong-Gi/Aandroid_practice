@@ -26,6 +26,8 @@ import javax.xml.parsers.ParserConfigurationException;
 
 public class Activity_Test extends Activity {
 
+    private String serviceKey = "=5LMImuDe4KYWVHN%2BC8ZiRhKnnboWUFJjia05xmbVjuw79Gv5upIZD%2BB03TgGptciKHQAYkX5TNgTptdIAqJYPg%3D%3D";
+
     public class OpenAPI extends AsyncTask<Void, Void, String> {
         private String url;
 
@@ -98,6 +100,7 @@ public class Activity_Test extends Activity {
         TextView tvTEST = (TextView) findViewById(R.id.textViewTEST);
         Button btnRefresh = (Button) findViewById(R.id.btnRefresh);
         Button btnEndTEST = (Button) findViewById(R.id.btnEndTEST);
+        Button btnTIP = (Button) findViewById(R.id.btnTIP);
 
         SimpleDateFormat real_time = new SimpleDateFormat("yyyyMMdd");
         Date time = new Date();
@@ -115,7 +118,7 @@ public class Activity_Test extends Activity {
         final String base_time_f = base_time;
 
 
-        String serviceKey = "=5LMImuDe4KYWVHN%2BC8ZiRhKnnboWUFJjia05xmbVjuw79Gv5upIZD%2BB03TgGptciKHQAYkX5TNgTptdIAqJYPg%3D%3D";
+        //String serviceKey = "=5LMImuDe4KYWVHN%2BC8ZiRhKnnboWUFJjia05xmbVjuw79Gv5upIZD%2BB03TgGptciKHQAYkX5TNgTptdIAqJYPg%3D%3D";
         String URL_weather = "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey" +
                 serviceKey + "&pageNo=1&numOfRows=1000&dataType=XML&base_date=" + base_date + "&base_time=" + base_time_f + "&nx=68&ny=109";
 
@@ -152,6 +155,13 @@ public class Activity_Test extends Activity {
                         });
                     }
                 }).start();
+            }
+        });
+
+        btnTIP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvTEST.setText("갱신을 눌러주세요.\n\nTip: 강수 형태 알아보기\n\n 없음(0)\n 비(1)\n 비/눈(2)\n 눈(3)\n 빗방울(5)\n 빗방울눈날림(6)\n 눈날림(7)");
             }
         });
 

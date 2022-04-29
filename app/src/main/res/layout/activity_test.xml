@@ -13,6 +13,13 @@
         android:text="갱신" />
 
     <Button
+        android:id="@+id/btnTIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="팁 다시보기" />
+
+    <Button
         android:id="@+id/btnEndTEST"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +34,7 @@
         android:layout_marginTop="20dp"
         android:gravity="left"
         android:hint="좌표를 입력해주세요"
-        android:text="날씨를 확인하시려면 좌표 입력 후\n갱신을 눌러주세요.\n\nTip: 강수 형태 알아보기\n\n 없음(0)\n 비(1)\n 비/눈(2)\n 눈(3)\n 빗방울(5)\n 빗방울눈날림(6)\n 눈날림(7)"
+        android:text="갱신을 눌러주세요.\n\nTip: 강수 형태 알아보기\n\n 없음(0)\n 비(1)\n 비/눈(2)\n 눈(3)\n 빗방울(5)\n 빗방울눈날림(6)\n 눈날림(7)"
         android:textSize="20dp"
         android:textColor="@color/black"/>
 
