@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#FFFFFF">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="컴"
+        android:textColor="@color/black"
+        android:textSize="55dp"
+        android:gravity="left"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="결과"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나"
+        android:gravity="right"
+        android:textColor="@color/black"
+        android:layout_weight="1"
+        android:textSize="55dp" />
+
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score: "
+        android:textColor="#FF0000"
+        android:gravity="left"
+        android:textSize="30dp"
+        android:layout_marginBottom="40dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="40dp">
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/btnS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가위"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:background="@color/teal_200"/>
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/btnR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="바위"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:background="@color/teal_200"/>
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/btnP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="보"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:background="@color/teal_200"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="시작"
+        android:textSize="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="#BDBDBD"/>
+
+    <Button
+        android:id="@+id/btnEndA1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="돌아가기"
+        android:textSize="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="#BDBDBD"/>
+
+</LinearLayout>
